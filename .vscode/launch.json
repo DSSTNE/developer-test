@@ -1,0 +1,23 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open Landing Page",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}/level-1-frontend"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open Contact Page",
+            "url": "http://localhost:8080/contact.html",
+            "webRoot": "${workspaceFolder}/level-1-frontend"
+        }
+    ]
+}

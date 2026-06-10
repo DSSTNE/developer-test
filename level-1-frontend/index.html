@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing page title — Site name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">Site name</a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#" class="nav__link">Page</a>
+        <a href="#" class="nav__link">Page</a>
+        <a href="contact.html" class="nav__link">Page</a>
+      </nav>
+
+      <a href="#" class="btn btn--primary header__cta">Join now</a>
+
+      <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu__header">
+      <a href="index.html" class="logo">Site name</a>
+      <button class="mobile-menu__close" type="button" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-menu__nav" aria-label="Mobile navigation">
+      <a href="#" class="mobile-menu__link">Page</a>
+      <a href="#" class="mobile-menu__link">Page</a>
+      <a href="contact.html" class="mobile-menu__link">Page</a>
+      <a href="#" class="btn btn--primary mobile-menu__cta">Join now</a>
+    </nav>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__content">
+        <h1 class="hero__title">Landing page title</h1>
+        <p class="hero__text">Subheading that sets up context, shares more info about the website, or gives some user a test that they can take or value that they can get.</p>
+        <a href="#" class="btn btn--primary">Join now</a>
+      </div>
+      <div class="hero__image-wrap">
+        <img
+          src="assets/hero.jpg"
+          alt="People sharing a meal together"
+          class="hero__image"
+          width="1440"
+          height="640"
+        >
+      </div>
+    </section>
+
+    <section class="cards-section">
+      <div class="container">
+        <h2 class="section-title">Heading</h2>
+        <p class="section-text">Subheading that sets up context, shares more info about the website, or gives some user a test that they can take or value that they can get.</p>
+
+        <div class="cards">
+          <article class="card">
+            <img src="assets/avatar-1.svg" alt="" class="card__avatar" width="48" height="48">
+            <h3 class="card__title">Subheading</h3>
+            <p class="card__text">Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story.</p>
+          </article>
+          <article class="card">
+            <img src="assets/avatar-2.svg" alt="" class="card__avatar" width="48" height="48">
+            <h3 class="card__title">Subheading</h3>
+            <p class="card__text">Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story.</p>
+          </article>
+          <article class="card">
+            <img src="assets/avatar-3.svg" alt="" class="card__avatar" width="48" height="48">
+            <h3 class="card__title">Subheading</h3>
+            <p class="card__text">Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="logo">Site name</a>
+        <div class="footer__social">
+          <a href="#" class="footer__social-link" aria-label="Social network 1">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><circle cx="10" cy="10" r="8"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Social network 2">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><circle cx="10" cy="10" r="8"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Social network 3">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><circle cx="10" cy="10" r="8"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Social network 4">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><circle cx="10" cy="10" r="8"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__links">
+        <div class="footer__column">
+          <a href="#" class="footer__link">Topic</a>
+          <a href="#" class="footer__link">Page</a>
+          <a href="#" class="footer__link">Page</a>
+          <a href="#" class="footer__link">Page</a>
+        </div>
+        <div class="footer__column">
+          <a href="#" class="footer__link">Topic</a>
+          <a href="#" class="footer__link">Page</a>
+          <a href="#" class="footer__link">Page</a>
+          <a href="#" class="footer__link">Page</a>
+        </div>
+        <div class="footer__column">
+          <a href="#" class="footer__link">Topic</a>
+          <a href="#" class="footer__link">Page</a>
+          <a href="#" class="footer__link">Page</a>
+          <a href="#" class="footer__link">Page</a>
+        </div>
+        <div class="footer__column">
+          <a href="#" class="footer__link">Topic</a>
+          <a href="#" class="footer__link">Page</a>
+          <a href="#" class="footer__link">Page</a>
+          <a href="#" class="footer__link">Page</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
