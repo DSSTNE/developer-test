@@ -1,41 +1,56 @@
-# Developer Test Task
+# developer-test
 
-Тестове завдання: 4 рівні складності.
+Тестове завдання, 4 рівні.
 
-## Структура
+## Посилання
 
-```
-developer-test/
-├── level-1-frontend/    # Верстка за Figma
-├── level-2-data/          # Excel + XML
-├── level-3-integration/   # Форма + SalesDrive + Діловод
-└── level-4-cms/           # WooCommerce плагін
-```
+- Сайт: https://jocular-dodol-fa0b4b.netlify.app
+- Репо: https://github.com/DSSTNE/developer-test
 
-## Рівень 1 — Frontend
+## Що де лежить
 
-- Макет: [Figma](https://www.figma.com/design/fxz6GkQVW9BwrCOcn9EvGX/Test-Task?node-id=0-1)
-- Шрифт: Inter
-- Сторінки: Landing, Contact Us
+- `level-1-frontend/` — верстка (Landing + Contact)
+- `level-2-data/` — скрипт для Excel і XML
+- `level-3-integration/` — ще не робив
+- `level-4-cms/` — ще не робив
 
-## Рівень 1 — Запуск локально
+---
 
+## Рівень 1
+
+Макет: https://www.figma.com/design/fxz6GkQVW9BwrCOcn9EvGX/Test-Task
+
+Зробив Landing і Contact Us, шрифт Inter. Є hover на картках, бургер-меню на мобілці, тінь на посиланнях з `#`.
+
+Локально:
 ```bash
 cd level-1-frontend
 python3 -m http.server 8080
-# Відкрити http://localhost:8080
 ```
 
-## Рівень 1 — Деплой на тестовий домен
+На Netlify задеплоєно з папки `level-1-frontend`. В корені є `netlify.toml` — без нього був 404.
 
-1. Залити репозиторій на GitHub
-2. Підключити до **Netlify**, **Vercel** або **GitHub Pages**
-3. Root directory: `level-1-frontend`
-4. Отримати URL типу `https://your-name.netlify.app`
+---
+
+## Рівень 2
+
+Скрипт оновлює ціни в Import.xlsx по прайсу, рахує стару ціну (+10%), фарбує рядки і генерує catalog.xml.
+
+```bash
+cd level-2-data
+pip install -r requirements.txt
+python3 process.py
+```
+
+Результат в `level-2-data/output/`.
+
+Детальніше — в README всередині level-2-data.
+
+---
 
 ## Статус
 
-- [x] Рівень 1 — Frontend (Landing + Contact Us)
-- [ ] Рівень 2 — Data
-- [ ] Рівень 3 — Integration
-- [ ] Рівень 4 — CMS
+- [x] рівень 1
+- [x] рівень 2
+- [ ] рівень 3
+- [ ] рівень 4
