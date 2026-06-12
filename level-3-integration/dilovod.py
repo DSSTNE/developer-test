@@ -63,8 +63,18 @@ def create_client_from_lead(payload: dict[str, str], salesdrive_order_id: str | 
     except ValueError:
         body = {"raw": response.text[:300]}
 
+    api_ok = (
+        response.ok
+        and isinstance(body, dict)
+        and not body.get("error")
+        and (body.get("result") == "ok" or body.get("id"))
+    )
+
+    if not api_ok and isinstance(body, dict) and body.get("error"):
+        notify_api_failure("Dilovod", str(body.get("error")))
+
     return {
-        "ok": response.ok,
+        "ok": api_ok,
         "status_code": response.status_code,
         "body": body,
     }
