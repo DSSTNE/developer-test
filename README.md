@@ -58,7 +58,7 @@ cp .env.example .env
 python3 app.py
 ```
 
-Перевірив локально — SalesDrive і Dilovod проходять. Telegram в коді є, бота не встиг підключити.
+Перевірив локально — SalesDrive і Dilovod проходять. Telegram-бот підключено.
 Логін/пароль до тестових акаунтів передам.
 
 ---
@@ -75,5 +75,5 @@ python3 app.py
 
 - [x] 1 — frontend
 - [x] 2 — data
-- [x] 3 — integration (перевірено, TG не підключив)
+- [x] 3 — integration (SD + Dilovod + TG)
 - [x] 4 — WooCommerce (order #21)
