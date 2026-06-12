@@ -405,6 +405,38 @@ a[href="#"]:hover {
   min-height: 120px;
 }
 
+.form-status {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.form-status--success {
+  color: #1b7f3a;
+}
+
+.form-status--error {
+  color: #b42318;
+}
+
+.form-status--loading {
+  color: var(--color-gray-600);
+}
+
+.contact-form__honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.field-error {
+  min-height: 18px;
+  font-size: 12px;
+  color: #b42318;
+}
+
 .contact__image-wrap {
   order: 0;
 }

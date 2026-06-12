@@ -1,0 +1,11 @@
+.dts-delivery-fields {
+  margin: 12px 0 0;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fafafa;
+}
+
+.woocommerce-page .dts-delivery-fields .form-row {
+  margin-bottom: 8px;
+}

@@ -54,24 +54,29 @@
           <h1 class="contact__title">Contact us</h1>
           <p class="contact__text">Subheading that sets up context, shares more info about the website, or gives some user a test that they can take or value that they can get.</p>
 
-          <form class="contact-form" action="#" method="post">
+          <form class="contact-form" action="#" method="post" novalidate>
+            <input type="text" name="website" class="contact-form__honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
             <div class="contact-form__row">
               <div class="contact-form__field">
                 <label for="first-name">First name</label>
-                <input type="text" id="first-name" name="first-name" placeholder="First name">
+                <input type="text" id="first-name" name="first-name" placeholder="First name" required>
+                <span class="field-error" id="first-name-error"></span>
               </div>
               <div class="contact-form__field">
                 <label for="last-name">Last name</label>
                 <input type="text" id="last-name" name="last-name" placeholder="Last name">
+                <span class="field-error" id="last-name-error"></span>
               </div>
             </div>
             <div class="contact-form__field">
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="Email">
+              <input type="email" id="email" name="email" placeholder="Email" required>
+              <span class="field-error" id="email-error"></span>
             </div>
             <div class="contact-form__field">
               <label for="phone">Phone number</label>
-              <input type="tel" id="phone" name="phone" placeholder="Phone number">
+              <input type="tel" id="phone" name="phone" placeholder="+380 (50) 123-45-67" required>
+              <span class="field-error" id="phone-error"></span>
             </div>
             <div class="contact-form__field">
               <label for="message">Your message</label>
@@ -144,5 +149,6 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/contact-form.js"></script>
 </body>
 </html>

@@ -1,40 +1,39 @@
 # developer-test
 
-Тестове завдання, 4 рівні.
+Тестове завдання на 4 рівні. Робив поступово, все в одному репо.
 
 ## Посилання
 
 - Сайт: https://jocular-dodol-fa0b4b.netlify.app
-- Репо: https://github.com/DSSTNE/developer-test
+- GitHub: https://github.com/DSSTNE/developer-test
 
-## Що де лежить
+## Папки
 
-- `level-1-frontend/` — верстка (Landing + Contact)
-- `level-2-data/` — скрипт для Excel і XML
-- `level-3-integration/` — ще не робив
-- `level-4-cms/` — ще не робив
+- `level-1-frontend/` — верстка
+- `level-2-data/` — Excel + XML
+- `level-3-integration/` — бекенд форми
+- `level-4-cms/` — WooCommerce плагін
 
 ---
 
 ## Рівень 1
 
-Макет: https://www.figma.com/design/fxz6GkQVW9BwrCOcn9EvGX/Test-Task
+Макет з Figma: https://www.figma.com/design/fxz6GkQVW9BwrCOcn9EvGX/Test-Task
 
-Зробив Landing і Contact Us, шрифт Inter. Є hover на картках, бургер-меню на мобілці, тінь на посиланнях з `#`.
+Landing + Contact Us, шрифт Inter. Hover на картках, бургер на мобілці, тінь на `#` посиланнях.
 
-Локально:
 ```bash
 cd level-1-frontend
 python3 -m http.server 8080
 ```
 
-На Netlify задеплоєно з папки `level-1-frontend`. В корені є `netlify.toml` — без нього був 404.
+На Netlify викладено з `level-1-frontend`. Є `netlify.toml` в корені — без нього був 404.
 
 ---
 
 ## Рівень 2
 
-Скрипт оновлює ціни в Import.xlsx по прайсу, рахує стару ціну (+10%), фарбує рядки і генерує catalog.xml.
+Скрипт підтягує ціни з прайсу в Import, рахує old_price (+10%), фарбує змінені рядки, генерує catalog.xml.
 
 ```bash
 cd level-2-data
@@ -42,15 +41,39 @@ pip install -r requirements.txt
 python3 process.py
 ```
 
-Результат в `level-2-data/output/`.
+Результат — `level-2-data/output/`.
 
-Детальніше — в README всередині level-2-data.
+---
+
+## Рівень 3
+
+Форма на contact.html → Flask API → SalesDrive (заявка) → Dilovod (клієнт).
+
+Валідація імені/телефону, антиспам без капчі, Telegram якщо API лежить.
+
+```bash
+cd level-3-integration
+pip install -r requirements.txt
+cp .env.example .env
+python3 app.py
+```
+
+Потрібні тестові акаунти SalesDrive і Dilovod — логін/пароль передам для перевірки.
+Бекенд для продакшну треба задеплоїти окремо, в `.env` прописати ключі.
+
+---
+
+## Рівень 4
+
+Варіант B — WooCommerce. Плагін `dts-custom-shipping`: свій shipping method, поля місто/відділення/коментар, налаштування в адмінці.
+
+Тестив локально через LocalWP (`developer-test-wp.local`). Як ставити — в `level-4-cms/README.md`.
 
 ---
 
 ## Статус
 
-- [x] рівень 1
-- [x] рівень 2
-- [ ] рівень 3
-- [ ] рівень 4
+- [x] 1 — frontend
+- [x] 2 — data
+- [x] 3 — integration (код готовий, акаунти/деплой ще дороблю)
+- [x] 4 — WooCommerce (перевірив на order #21)
